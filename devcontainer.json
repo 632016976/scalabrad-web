@@ -1,0 +1,19 @@
+{
+  "name": "Scala Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "scalameta.metals",
+        "redhat.vscode-yaml"
+      ],
+      "settings": {
+        "java.home": "/usr/lib/jvm/java-8-openjdk-amd64",
+        "metals.javaHome": "/usr/lib/jvm/java-8-openjdk-amd64"
+      }
+    }
+  },
+  "postCreateCommand": "sbt server/run"
+}
